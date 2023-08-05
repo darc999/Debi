@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debi", "Debi\Debi.csproj", "{32358C27-60A1-4038-AF30-D018A135B07D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86EC26BD-789B-4526-BCDC-3C20FE4DEB8F} = {86EC26BD-789B-4526-BCDC-3C20FE4DEB8F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication3", "WebApplication3\WebApplication3.csproj", "{86EC26BD-789B-4526-BCDC-3C20FE4DEB8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32358C27-60A1-4038-AF30-D018A135B07D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32358C27-60A1-4038-AF30-D018A135B07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32358C27-60A1-4038-AF30-D018A135B07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32358C27-60A1-4038-AF30-D018A135B07D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86EC26BD-789B-4526-BCDC-3C20FE4DEB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86EC26BD-789B-4526-BCDC-3C20FE4DEB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86EC26BD-789B-4526-BCDC-3C20FE4DEB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86EC26BD-789B-4526-BCDC-3C20FE4DEB8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

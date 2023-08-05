@@ -1,0 +1,10 @@
+c:\users\acer\documents\visual studio 2012\Projects\Debi\Debi\bin\Debi.dll
+c:\users\acer\documents\visual studio 2012\Projects\Debi\Debi\bin\Debi.pdb
+c:\users\acer\documents\visual studio 2012\Projects\Debi\Debi\obj\Debug\Debi.csprojResolveAssemblyReference.cache
+c:\users\acer\documents\visual studio 2012\Projects\Debi\Debi\obj\Debug\Debi.dll
+c:\users\acer\documents\visual studio 2012\Projects\Debi\Debi\obj\Debug\Debi.pdb
+C:\Users\s\Desktop\Debi\Debi\Debi\bin\Debi.dll
+C:\Users\s\Desktop\Debi\Debi\Debi\bin\Debi.pdb
+C:\Users\s\Desktop\Debi\Debi\Debi\obj\Debug\Debi.csprojResolveAssemblyReference.cache
+C:\Users\s\Desktop\Debi\Debi\Debi\obj\Debug\Debi.dll
+C:\Users\s\Desktop\Debi\Debi\Debi\obj\Debug\Debi.pdb

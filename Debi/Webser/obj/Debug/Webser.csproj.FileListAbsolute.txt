@@ -1,0 +1,5 @@
+C:\Users\ACER\Documents\Visual Studio 2012\Projects\Debi\Webser\obj\Debug\Webser.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Documents\Visual Studio 2012\Projects\Debi\Webser\bin\Webser.dll
+C:\Users\ACER\Documents\Visual Studio 2012\Projects\Debi\Webser\bin\Webser.pdb
+C:\Users\ACER\Documents\Visual Studio 2012\Projects\Debi\Webser\obj\Debug\Webser.dll
+C:\Users\ACER\Documents\Visual Studio 2012\Projects\Debi\Webser\obj\Debug\Webser.pdb

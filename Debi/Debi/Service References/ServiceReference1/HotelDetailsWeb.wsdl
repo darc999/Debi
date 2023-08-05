@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="reghot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="htlname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pnum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pswrd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reghotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reghotResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pswrd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addroom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="avl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imgid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addroomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addroomResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerRooms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="avl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imgid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerRoomsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registerRoomsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Viewss">
+        <s:complexType />
+      </s:element>
+      <s:element name="ViewssResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ViewssResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Updateroom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="avl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateroomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateroomResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Searcc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearccResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearccResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Searcc2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Searcc2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Searcc2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Searcc3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Searcc3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Searcc3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="reghotSoapIn">
+    <wsdl:part name="parameters" element="tns:reghot" />
+  </wsdl:message>
+  <wsdl:message name="reghotSoapOut">
+    <wsdl:part name="parameters" element="tns:reghotResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="addroomSoapIn">
+    <wsdl:part name="parameters" element="tns:addroom" />
+  </wsdl:message>
+  <wsdl:message name="addroomSoapOut">
+    <wsdl:part name="parameters" element="tns:addroomResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerRoomsSoapIn">
+    <wsdl:part name="parameters" element="tns:registerRooms" />
+  </wsdl:message>
+  <wsdl:message name="registerRoomsSoapOut">
+    <wsdl:part name="parameters" element="tns:registerRoomsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ViewssSoapIn">
+    <wsdl:part name="parameters" element="tns:Viewss" />
+  </wsdl:message>
+  <wsdl:message name="ViewssSoapOut">
+    <wsdl:part name="parameters" element="tns:ViewssResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateroomSoapIn">
+    <wsdl:part name="parameters" element="tns:Updateroom" />
+  </wsdl:message>
+  <wsdl:message name="UpdateroomSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateroomResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteR" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearccSoapIn">
+    <wsdl:part name="parameters" element="tns:Searcc" />
+  </wsdl:message>
+  <wsdl:message name="SearccSoapOut">
+    <wsdl:part name="parameters" element="tns:SearccResponse" />
+  </wsdl:message>
+  <wsdl:message name="Searcc2SoapIn">
+    <wsdl:part name="parameters" element="tns:Searcc2" />
+  </wsdl:message>
+  <wsdl:message name="Searcc2SoapOut">
+    <wsdl:part name="parameters" element="tns:Searcc2Response" />
+  </wsdl:message>
+  <wsdl:message name="Searcc3SoapIn">
+    <wsdl:part name="parameters" element="tns:Searcc3" />
+  </wsdl:message>
+  <wsdl:message name="Searcc3SoapOut">
+    <wsdl:part name="parameters" element="tns:Searcc3Response" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="reghot">
+      <wsdl:input message="tns:reghotSoapIn" />
+      <wsdl:output message="tns:reghotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addroom">
+      <wsdl:input message="tns:addroomSoapIn" />
+      <wsdl:output message="tns:addroomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registerRooms">
+      <wsdl:input message="tns:registerRoomsSoapIn" />
+      <wsdl:output message="tns:registerRoomsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Viewss">
+      <wsdl:input message="tns:ViewssSoapIn" />
+      <wsdl:output message="tns:ViewssSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Updateroom">
+      <wsdl:input message="tns:UpdateroomSoapIn" />
+      <wsdl:output message="tns:UpdateroomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteR">
+      <wsdl:input message="tns:DeleteRSoapIn" />
+      <wsdl:output message="tns:DeleteRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Searcc">
+      <wsdl:input message="tns:SearccSoapIn" />
+      <wsdl:output message="tns:SearccSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Searcc2">
+      <wsdl:input message="tns:Searcc2SoapIn" />
+      <wsdl:output message="tns:Searcc2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Searcc3">
+      <wsdl:input message="tns:Searcc3SoapIn" />
+      <wsdl:output message="tns:Searcc3SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="reghot">
+      <soap:operation soapAction="http://tempuri.org/reghot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addroom">
+      <soap:operation soapAction="http://tempuri.org/addroom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerRooms">
+      <soap:operation soapAction="http://tempuri.org/registerRooms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Viewss">
+      <soap:operation soapAction="http://tempuri.org/Viewss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updateroom">
+      <soap:operation soapAction="http://tempuri.org/Updateroom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteR">
+      <soap:operation soapAction="http://tempuri.org/DeleteR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searcc">
+      <soap:operation soapAction="http://tempuri.org/Searcc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searcc2">
+      <soap:operation soapAction="http://tempuri.org/Searcc2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searcc3">
+      <soap:operation soapAction="http://tempuri.org/Searcc3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="reghot">
+      <soap12:operation soapAction="http://tempuri.org/reghot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addroom">
+      <soap12:operation soapAction="http://tempuri.org/addroom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerRooms">
+      <soap12:operation soapAction="http://tempuri.org/registerRooms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Viewss">
+      <soap12:operation soapAction="http://tempuri.org/Viewss" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updateroom">
+      <soap12:operation soapAction="http://tempuri.org/Updateroom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteR">
+      <soap12:operation soapAction="http://tempuri.org/DeleteR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searcc">
+      <soap12:operation soapAction="http://tempuri.org/Searcc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searcc2">
+      <soap12:operation soapAction="http://tempuri.org/Searcc2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Searcc3">
+      <soap12:operation soapAction="http://tempuri.org/Searcc3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:1034/HotelDetailsWeb.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:1034/HotelDetailsWeb.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
